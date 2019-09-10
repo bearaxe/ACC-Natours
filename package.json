@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass -w ./sass/main.scss ./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bearaxe/ACC-Natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bearaxe/ACC-Natours/issues"
+  },
+  "homepage": "https://github.com/bearaxe/ACC-Natours#readme",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
