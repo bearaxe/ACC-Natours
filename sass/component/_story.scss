@@ -1,4 +1,6 @@
 .story {
+  $skew-story: 12deg;
+
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba($color-black, .1);
@@ -7,7 +9,8 @@
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
-  transform: skewX(-12deg);
+  backface-visibility: hidden;
+  transform: skewX($skew-story * -1);
 
   &__shape {
     width: 15rem;
@@ -17,7 +20,10 @@
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
+    backface-visibility: hidden;
+
+    // Adding in adjustment to prevent strange rounding error from displaying in Chrome
+    transform: translateX(-3rem) skewX($skew-story - .00001);
     position: relative;
   }
 
@@ -29,7 +35,7 @@
   }
 
   &__text {
-    transform: skewX(12deg);
+    transform: skewX($skew-story);
   }
 
   &__caption {

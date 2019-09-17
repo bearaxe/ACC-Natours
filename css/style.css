@@ -329,6 +329,7 @@ body {
   padding: 6rem;
   padding-left: 9rem;
   font-size: 1.6rem;
+  backface-visibility: hidden;
   transform: skewX(-12deg); }
   .story__shape {
     width: 15rem;
@@ -338,7 +339,8 @@ body {
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
+    backface-visibility: hidden;
+    transform: translateX(-3rem) skewX(11.99999deg);
     position: relative; }
   .story__img {
     height: 100%;
