@@ -584,12 +584,10 @@ body {
 .navigation__item {
   margin: 1rem;
   counter-increment: nav-option; }
-
-.navigation__item:nth-child(n) > a::before {
-  content: "0" counter(nav-option) " "; }
-
-.navigation__item:nth-child(n+10) > a::before {
-  content: counter(nav-option) " "; }
+  .navigation__item:nth-child(n) > a::before {
+    content: "0" counter(nav-option) " "; }
+  .navigation__item:nth-child(n+10) > a::before {
+    content: counter(nav-option) " "; }
 
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;

@@ -47,12 +47,8 @@
   &__item {
     margin: 1rem;
 
-    counter-increment: nav-option;
-  }
-
-  &__item {
-
     // An overpowered demo of css counters. Appends 0 to single digit counts.
+    counter-increment: nav-option;
     &:nth-child(n) > a::before {
       content: "0" counter(nav-option) " ";
     }
