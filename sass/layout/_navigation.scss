@@ -27,8 +27,6 @@
     z-index: 9000;
     box-shadow: 0 1rem 3rem rgba($color-black, .15);
     transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-
-    // transform: scale(80);
   }
 
   &__nav {
@@ -45,14 +43,11 @@
   }
 
   &__list {
-    counter-reset: nav-option;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include absCenter;
     list-style: none;
     text-align: center;
     width: 100%;
+    counter-reset: nav-option;
   }
 
   &__item {

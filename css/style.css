@@ -398,14 +398,14 @@ body {
   top: -.4rem; }
   .form__radio-button::after {
     content: '';
-    display: block;
-    height: 1.3rem;
-    width: 1.3rem;
-    border-radius: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
     background-color: #55c57a;
     opacity: 0;
     transition: opacity .2s; }
@@ -414,6 +414,7 @@ body {
   opacity: 1; }
 
 .popup {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -490,7 +491,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, -50%);
     color: #fff;
     font-size: 1.7rem;
     text-align: center;
@@ -581,9 +582,11 @@ body {
     height: 3.5rem; }
   .header__text-box {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
     text-align: center; }
 
 .navigation__checkbox {
@@ -625,14 +628,14 @@ body {
   transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .navigation__list {
-  counter-reset: nav-option;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
   text-align: center;
-  width: 100%; }
+  width: 100%;
+  counter-reset: nav-option; }
 
 .navigation__item {
   margin: 1rem;
