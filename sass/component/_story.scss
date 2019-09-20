@@ -12,6 +12,16 @@
   backface-visibility: hidden;
   transform: skewX($skew-story * -1);
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
@@ -25,6 +35,10 @@
     // Adding in adjustment to prevent strange rounding error from displaying in Chrome
     transform: translateX(-3rem) skewX($skew-story - .00001);
     position: relative;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
@@ -36,6 +50,9 @@
 
   &__text {
     transform: skewX($skew-story);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__caption {
