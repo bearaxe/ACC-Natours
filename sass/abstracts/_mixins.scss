@@ -35,6 +35,6 @@ $breakpoint arguement choices:
         @media (max-width: 75em) { @content };      // 1200px
     }
     @if $breakpoint == big-desktop {
-        @media (max-width: 112.5em) { @content };   // 1800px
+        @media (min-width: 112.5em) { @content };   // 1800px
     }
 }
